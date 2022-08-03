@@ -1,0 +1,15 @@
+{
+  "name": "ob2-internal",
+  "version": "1.0.0",
+  "description": "anything for tcrb-ob2",
+  "main": "list-api-gateway.js",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1"
+  }
+}
