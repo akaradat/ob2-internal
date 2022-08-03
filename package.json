@@ -4,6 +4,7 @@
   "description": "anything for tcrb-ob2",
   "main": "list-api-gateway.js",
   "scripts": {
+    "list-api-endpoint": "node script/api-gateway-list/start.js"
   },
   "keywords": [],
   "author": "",
