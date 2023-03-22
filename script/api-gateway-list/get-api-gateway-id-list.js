@@ -1,4 +1,5 @@
 // response at 3-Aug-22
+// POST: https://ap-southeast-1.console.aws.amazon.com/apigateway/api/apigateway
 const responseFromAws = {
   item: [
     {
@@ -19,6 +20,27 @@ const responseFromAws = {
         'aws:cloudformation:stack-id':
           'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-ob-payment/215288d0-cebd-11eb-a29b-063c5f980302',
         'aws:cloudformation:stack-name': 'tcrb-ob-payment',
+      },
+      version: '1.0',
+    },
+    {
+      apiKeySource: 'HEADER',
+      createdDate: 1660490358,
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
+      id: '0nvbxe56r9',
+      name: 'tcrb-ob-cardless-withdraw-partner',
+      policy:
+        '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
+      tags: {
+        'aws:cloudformation:logical-id': 'PartnerApiGateway',
+        'aws:cloudformation:stack-id':
+          'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-ob-cardless-withdraw/ee607b60-1be3-11ed-9d3a-0a969afd284e',
+        'aws:cloudformation:stack-name': 'tcrb-ob-cardless-withdraw',
       },
       version: '1.0',
     },
@@ -45,9 +67,33 @@ const responseFromAws = {
     },
     {
       apiKeySource: 'HEADER',
+      createdDate: 1660214336,
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
+      id: '1ed0bue2ng',
+      name: 'tcrb-debtacq-cif',
+      policy:
+        '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
+      tags: {
+        'aws:cloudformation:logical-id': 'CifApiGateway',
+        'aws:cloudformation:stack-id':
+          'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-debtacq-cif/f2f440e0-195d-11ed-8ca2-0a5e031cf822',
+        'aws:cloudformation:stack-name': 'tcrb-debtacq-cif',
+      },
+      version: '1.0',
+    },
+    {
+      apiKeySource: 'HEADER',
       createdDate: 1599834615,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '2ca21t1ah9',
       name: 'tcrb-ob-translation-ob',
       policy:
@@ -59,7 +105,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834487,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '2ygsfbnm93',
       name: 'tcrb-ob-resource-model-ob',
       policy:
@@ -71,7 +120,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834487,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '30h21qbdfd',
       name: 'tcrb-ob-otp-ob',
       policy:
@@ -103,12 +155,36 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1643782358,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: '3y8qfdlf8d',
       name: 'Clone from tcrb-mb-backend',
       policy:
         '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"arn:aws:execute-api:ap-southeast-1:313571681948:*\\"}]}',
       version: '2020-05-18T11:22:15Z',
+    },
+    {
+      apiKeySource: 'HEADER',
+      createdDate: 1660490354,
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
+      id: '42smm9ey34',
+      name: 'tcrb-ob-cardless-withdraw-ob',
+      policy:
+        '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
+      tags: {
+        'aws:cloudformation:logical-id': 'ObApiGateway',
+        'aws:cloudformation:stack-id':
+          'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-ob-cardless-withdraw/ee607b60-1be3-11ed-9d3a-0a969afd284e',
+        'aws:cloudformation:stack-name': 'tcrb-ob-cardless-withdraw',
+      },
+      version: '1.0',
     },
     {
       apiKeySource: 'HEADER',
@@ -137,7 +213,10 @@ const responseFromAws = {
       description:
         'Your first API with Amazon API Gateway. This is a sample API that integrates via HTTP with our demo Pet Store endpoints',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: '4jh1yxeh02',
       name: 'PetStore',
     },
@@ -145,7 +224,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1617035056,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '4nsyp0zly7',
       name: 'tcrb-ob-transaction-partner',
       policy:
@@ -156,7 +238,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1654584712,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '4qovrwr8za',
       name: 'hello-api-chanza',
       policy:
@@ -200,7 +285,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1623119752,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '5kn9g896u2',
       name: 'devops-lambda-test',
       policy:
@@ -211,7 +299,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834503,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '5v2u53s6nl',
       name: 'tcrb-ob-repayment-partner',
       policy:
@@ -245,7 +336,10 @@ const responseFromAws = {
       createdDate: 1658131740,
       description: 'test deleted multi stage',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '6sapp5xngl',
       name: 'devops-fuse-test',
     },
@@ -274,7 +368,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1656919731,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: '7cxwmmidze',
       name: 'test-api-2',
     },
@@ -304,11 +401,26 @@ const responseFromAws = {
       createdDate: 1613726039,
       description: 'image-service(liveness,face-rec)',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: '8w40nvhm9a',
       name: 'tcrb-private-bot-imageservice',
       policy:
         '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"arn:aws:execute-api:ap-southeast-1:313571681948:*\\"}]}',
+    },
+    {
+      apiKeySource: 'HEADER',
+      createdDate: 1662425421,
+      description: 'testLoanPublic',
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
+      id: '95sun7jfsf',
+      name: 'testLoanPublic',
     },
     {
       apiKeySource: 'HEADER',
@@ -389,7 +501,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1630653851,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['EDGE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['EDGE'],
+      },
       id: 'aea8y80shk',
       name: '${org}-${product}-${module}-ob',
       version: '2020-05-18T11:22:15Z',
@@ -399,7 +514,10 @@ const responseFromAws = {
       createdDate: 1613718262,
       description: 'ekyc-service',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'ann1zf0r05',
       name: 'tcrb-private-bot-customer',
       policy:
@@ -444,7 +562,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1656919692,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'c8ym149md1',
       name: 'test-api-1',
     },
@@ -453,7 +574,10 @@ const responseFromAws = {
       createdDate: 1613717376,
       description: 'image-service(customer api)',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'ch53k51psk',
       name: 'tcrb-private-bot-imagecustomer',
       policy:
@@ -463,7 +587,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834508,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'd09y03rvmc',
       name: 'tcrb-ob-partner-management-ob',
       policy:
@@ -475,11 +602,35 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1613632115,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'd4zdiv5p04',
       name: 'tcrb-tablet-backend',
       policy:
         '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"arn:aws:execute-api:ap-southeast-1:313571681948:*\\"}]}',
+      version: '2020-05-18T11:22:15Z',
+    },
+    {
+      apiKeySource: 'HEADER',
+      createdDate: 1664884421,
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
+      id: 'dawdn3s719',
+      name: 'tcrb-ob-cash-deposit-partner',
+      policy:
+        '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
+      tags: {
+        'aws:cloudformation:logical-id': 'PartnerApiGateway',
+        'aws:cloudformation:stack-id':
+          'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-ob-cash-deposit/ba895f90-43da-11ed-8fd0-0251ba002ae8',
+        'aws:cloudformation:stack-name': 'tcrb-ob-cash-deposit',
+      },
       version: '2020-05-18T11:22:15Z',
     },
     {
@@ -524,7 +675,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1653478680,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'e5f5inw16k',
       name: 'devops-poc-multi-stage-api',
       policy:
@@ -556,7 +710,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1643105206,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'ewxwnjcssh',
       name: 'tcrb-platform-apipartner-public',
       policy:
@@ -574,7 +731,10 @@ const responseFromAws = {
       createdDate: 1643779835,
       description: 'testAPI11',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'f3b2yhfnpa',
       name: 'testAPI11',
     },
@@ -603,7 +763,11 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834496,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
       id: 'fhvn2malh5',
       name: 'tcrb-ob-otp-partner',
       policy:
@@ -654,6 +818,27 @@ const responseFromAws = {
     },
     {
       apiKeySource: 'HEADER',
+      createdDate: 1660197884,
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
+      id: 'gfa5s9e494',
+      name: 'tcrb-debtacq-datamart',
+      policy:
+        '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
+      tags: {
+        'aws:cloudformation:logical-id': 'DatamartApiGateway',
+        'aws:cloudformation:stack-id':
+          'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-debtacq-datamart/3ae192e0-193b-11ed-bfd5-065a47b0a250',
+        'aws:cloudformation:stack-name': 'tcrb-debtacq-datamart',
+      },
+      version: '1.0',
+    },
+    {
+      apiKeySource: 'HEADER',
       createdDate: 1622540631,
       disableExecuteApiEndpoint: false,
       endpointConfiguration: {
@@ -668,7 +853,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834621,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'hjrweal6y9',
       name: 'tcrb-ob-withdrawal-partner',
       policy:
@@ -690,7 +878,10 @@ const responseFromAws = {
       ],
       createdDate: 1600054752,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'hlmt8j0z6b',
       name: 'tcrb-ob-backoffice-authorizer-ob',
       policy:
@@ -781,15 +972,42 @@ const responseFromAws = {
       createdDate: 1643764895,
       description: 'testAPI',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'jvlk26p1c4',
       name: 'testAPI',
     },
     {
       apiKeySource: 'HEADER',
+      createdDate: 1664422553,
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
+      id: 'k0aadzo23a',
+      name: 'tcrb-bof-uam',
+      policy:
+        '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
+      tags: {
+        'aws:cloudformation:logical-id': 'uamApiGateway',
+        'aws:cloudformation:stack-id':
+          'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-bof-uam/ed40fbb0-3b1e-11ed-9acf-0ad459fb01fe',
+        'aws:cloudformation:stack-name': 'tcrb-bof-uam',
+      },
+      version: '1.0',
+    },
+    {
+      apiKeySource: 'HEADER',
       createdDate: 1625105144,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['EDGE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['EDGE'],
+      },
       id: 'k66cx2z6bl',
       name: 'devops-test-deploy-api-gateway',
       tags: {
@@ -826,7 +1044,10 @@ const responseFromAws = {
       binaryMediaTypes: ['image/*'],
       createdDate: 1611293817,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'kju3v3kn0b',
       name: 'tcrb-mb-backend',
       policy:
@@ -837,7 +1058,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599840501,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'lb84bocom2',
       name: 'tcrb-ob-gl-ob',
       policy:
@@ -849,7 +1073,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1617092231,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'lxic24p9ri',
       name: 'poc-bof-es',
       policy:
@@ -860,7 +1087,10 @@ const responseFromAws = {
       createdDate: 1613716143,
       description: 'ekyc-service',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'mhhmbrb7wj',
       name: 'tcrb-private-bot-transaction',
       policy:
@@ -887,7 +1117,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1619578627,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'n563k38x27',
       name: 'tcrb-platform-kyc',
       policy:
@@ -904,7 +1137,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834499,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'nk8ol9z9s4',
       name: 'tcrb-ob-fee-ob',
       policy:
@@ -916,7 +1152,10 @@ const responseFromAws = {
       createdDate: 1613720922,
       description: 'ekyc-service',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'nqtdejldx1',
       name: 'tcrb-private-bot-kycfacial',
       policy:
@@ -969,7 +1208,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834488,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'p0h2vu2gii',
       name: 'tcrb-ob-loanaccount-ob',
       policy:
@@ -1002,7 +1244,10 @@ const responseFromAws = {
       createdDate: 1613632581,
       description: 'This is sample description',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'pfx9qahkdk',
       name: 'eKYC Core Service API Document',
       version: '1.0.0',
@@ -1042,7 +1287,10 @@ const responseFromAws = {
       ],
       createdDate: 1654081132,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'pgnjmegkt7',
       name: '${org}-${product}-${module}-ob',
       policy:
@@ -1053,7 +1301,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599840506,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'q2tfv7hgne',
       name: 'tcrb-ob-transaction-ob',
       policy:
@@ -1086,7 +1337,10 @@ const responseFromAws = {
       createdDate: 1625702298,
       description: 'Created by AWS Lambda',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'qk6ybg45zl',
       name: 'poc-cognito-API',
     },
@@ -1124,7 +1378,10 @@ const responseFromAws = {
       createdDate: 1600147078,
       description: 'API for partner portal',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'rzck5dozs2',
       name: 'tcrb-ob-partner-portal',
       policy:
@@ -1134,10 +1391,25 @@ const responseFromAws = {
     },
     {
       apiKeySource: 'HEADER',
+      createdDate: 1662424371,
+      description: 'testAPILoan',
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
+      id: 'sinu51c07a',
+      name: 'testAPILoan',
+    },
+    {
+      apiKeySource: 'HEADER',
       createdDate: 1644294558,
       description: 'Created by AWS Lambda',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'st3gwr2or3',
       name: 'getSet1-API',
     },
@@ -1166,7 +1438,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1619098711,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'ul706rfphf',
       name: 'test-retrieve-s3image-2',
     },
@@ -1196,7 +1471,10 @@ const responseFromAws = {
       createdDate: 1599834483,
       description: 'Request and Verify OTP that requests from partner.',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 've4soo6f16',
       name: 'tcrb-ob-customer-ob-api',
       policy:
@@ -1208,9 +1486,33 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1631334882,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'vjl7mjysye',
       name: 'test-export-file',
+    },
+    {
+      apiKeySource: 'HEADER',
+      createdDate: 1660218239,
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
+      id: 'vkobmtejt0',
+      name: 'tcrb-debtacq-specialist',
+      policy:
+        '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
+      tags: {
+        'aws:cloudformation:logical-id': 'SpecialistApiGateway',
+        'aws:cloudformation:stack-id':
+          'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-debtacq-specialist/b7411010-1961-11ed-9fa0-0acb10f627ae',
+        'aws:cloudformation:stack-name': 'tcrb-debtacq-specialist',
+      },
+      version: '1.0',
     },
     {
       apiKeySource: 'HEADER',
@@ -1239,7 +1541,10 @@ const responseFromAws = {
       createdDate: 1644300386,
       description: 'Created by AWS Lambda',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['REGIONAL'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['REGIONAL'],
+      },
       id: 'wg9zfn2sl9',
       name: 'getSetValueFunction-API',
     },
@@ -1268,7 +1573,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599839286,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'xpgbituzw2',
       name: 'tcrb-ob-binding-ob',
       policy:
@@ -1281,7 +1589,10 @@ const responseFromAws = {
       createdDate: 1613721364,
       description: 'ekyc-service',
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'xpql2qd1zl',
       name: 'tcrb-private-bot-messages',
       policy:
@@ -1303,7 +1614,10 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1651048685,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'yc94owq1le',
       name: 'tcrb-bof-customer',
       policy:
@@ -1314,13 +1628,37 @@ const responseFromAws = {
       apiKeySource: 'HEADER',
       createdDate: 1599834503,
       disableExecuteApiEndpoint: false,
-      endpointConfiguration: { ipv6: false, types: ['PRIVATE'] },
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+      },
       id: 'yf81hltsy8',
       name: 'tcrb-ob-partner-authorize-data-partner',
       policy:
         '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
       tags: {},
       version: '2020-05-18T11:22:15Z',
+    },
+    {
+      apiKeySource: 'HEADER',
+      createdDate: 1664887117,
+      disableExecuteApiEndpoint: false,
+      endpointConfiguration: {
+        ipv6: false,
+        types: ['PRIVATE'],
+        vpcEndpointIds: ['vpce-03ae60b10934425db'],
+      },
+      id: 'yy82ympyv3',
+      name: 'tcrb-ob-cash-withdraw-partner',
+      policy:
+        '{\\"Version\\":\\"2012-10-17\\",\\"Statement\\":[{\\"Effect\\":\\"Allow\\",\\"Principal\\":\\"*\\",\\"Action\\":\\"execute-api:Invoke\\",\\"Resource\\":\\"*\\"}]}',
+      tags: {
+        'aws:cloudformation:logical-id': 'PartnerApiGateway',
+        'aws:cloudformation:stack-id':
+          'arn:aws:cloudformation:ap-southeast-1:313571681948:stack/tcrb-ob-cash-withdraw/025411c0-43e1-11ed-8c05-065a0b2d4df4',
+        'aws:cloudformation:stack-name': 'tcrb-ob-cash-withdraw',
+      },
+      version: '1.0',
     },
     {
       apiKeySource: 'HEADER',

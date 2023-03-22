@@ -71,6 +71,7 @@ async function listOnlyLambdaApiGateway(name, id) {
       const uri = info?.methodIntegration?.uri || '';
       if (uri.includes('lambda')) {
         lambdaApiGateway.push({
+          id: item.id,
           name,
           uri,
           path: item.path,
@@ -101,10 +102,15 @@ async function getAllApiEndpoint() {
   return apiEndpoint;
 }
 
+function getDate() {
+  return new Date().toISOString().split('T')[0];
+}
+
 async function run() {
   const data = await getAllApiEndpoint();
+  const date = getDate();
 
-  await writeFile('api-endpoint.json', data);
+  await writeFile(`api-endpoint-${date}.json`, data);
 
   console.log('Done');
 }
